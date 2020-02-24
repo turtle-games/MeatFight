@@ -9,4 +9,4 @@ programmed in GDSript.
 ## Try it out
 You can try the game out [here](https://bit.ly/MeatFightGame).
 __IMPORTANT:__
- If you wanna give it a try, be sure to consult your psychologist, because it may cause permament psychological problems (e.g. depression, chronic anxiety)!
+ If you wanna give it a try,s be sure to consult your psychologist first, as it may cause permament psychological problems (e.g. depression, chronic anxiety)!
