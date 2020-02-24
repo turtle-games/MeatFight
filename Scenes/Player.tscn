@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scenes/Player.gd" type="Script" id=1]
+[ext_resource path="res://Art/Sprites/meat.Png" type="Texture" id=2]
+[ext_resource path="res://Art/Sprites/shield.svg" type="Texture" id=3]
+[ext_resource path="res://Art/explosion.png" type="Texture" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 74.4128, 101.184 )
+
+[node name="Player" type="StaticBody2D"]
+position = Vector2( 0, -1.10803 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 2 )
+
+[node name="Shield" type="Sprite" parent="Sprite"]
+scale = Vector2( 1.5, 1.5 )
+z_index = 1
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Explosion" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 4 )

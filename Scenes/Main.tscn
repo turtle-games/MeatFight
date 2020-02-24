@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/Main.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Art/background.jpg" type="Texture" id=3]
+[ext_resource path="res://Scenes/HUD.tscn" type="PackedScene" id=4]
+
+[node name="Main" type="Node2D"]
+position = Vector2( 197.332, -0.94823 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Player1" parent="." groups=[
+"Players",
+] instance=ExtResource( 2 )]
+position = Vector2( -100, 300 )
+control_up = "ui_up_2"
+control_down = "ui_down_2"
+projectile_location = 100
+control_shoot = "ui_shoot_1"
+shoot_speed = 15
+id = 1
+
+[node name="Player2" parent="." groups=[
+"Players",
+] instance=ExtResource( 2 )]
+position = Vector2( 950, 300 )
+projectile_location = -100
+control_shoot = "ui_shoot_2"
+shoot_speed = -15
+id = 2
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 391.869, 370.59 )
+scale = Vector2( 2.63556, 2.63153 )
+z_index = -1
+texture = ExtResource( 3 )
+
+[node name="HUD" parent="." instance=ExtResource( 4 )]
